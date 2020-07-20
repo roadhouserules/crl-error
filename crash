@@ -1,0 +1,140 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  Do not report to Forge! (If you haven't disabled the FoamFix coremod, try disabling it in the config! Note that this bit of text will still appear.) (foamfix-0.10.5-1.12.2.jar)
+  ForgelinPlugin (Forgelin-1.8.4.jar)
+  BetterFoliageLoader (BetterFoliage-MC1.12-2.2.0.jar)
+Contact their authors BEFORE contacting forge
+
+// Don't be sad, have a hug! <3
+
+Time: 7/19/20 8:11 PM
+Description: Updating screen events
+
+java.lang.NoSuchFieldError: field_191308_b
+	at net.optifine.config.ConnectedParser.parseEntities(ConnectedParser.java:1241)
+	at net.optifine.shaders.EntityAliases.loadEntityAliases(EntityAliases.java:164)
+	at net.optifine.shaders.EntityAliases.update(EntityAliases.java:89)
+	at net.optifine.shaders.Shaders.loadShaderPackProperties(Shaders.java:1076)
+	at net.optifine.shaders.Shaders.loadShaderPack(Shaders.java:945)
+	at net.optifine.shaders.Shaders.setShaderPack(Shaders.java:871)
+	at net.optifine.shaders.gui.GuiSlotShaders.selectIndex(GuiSlotShaders.java:91)
+	at net.optifine.shaders.gui.GuiSlotShaders.func_148144_a(GuiSlotShaders.java:81)
+	at net.minecraft.client.gui.GuiSlot.func_178039_p(GuiSlot.java:323)
+	at net.optifine.shaders.gui.GuiShaders.func_146274_d(GuiShaders.java:117)
+	at net.minecraft.client.gui.GuiScreen.func_146269_k(GuiScreen.java:501)
+	at net.minecraft.client.Minecraft.func_71407_l(Minecraft.java:1759)
+	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:1098)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:398)
+	at net.minecraft.client.main.Main.main(SourceFile:123)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at net.optifine.config.ConnectedParser.parseEntities(ConnectedParser.java:1241)
+	at net.optifine.shaders.EntityAliases.loadEntityAliases(EntityAliases.java:164)
+	at net.optifine.shaders.EntityAliases.update(EntityAliases.java:89)
+	at net.optifine.shaders.Shaders.loadShaderPackProperties(Shaders.java:1076)
+	at net.optifine.shaders.Shaders.loadShaderPack(Shaders.java:945)
+	at net.optifine.shaders.Shaders.setShaderPack(Shaders.java:871)
+	at net.optifine.shaders.gui.GuiSlotShaders.selectIndex(GuiSlotShaders.java:91)
+	at net.optifine.shaders.gui.GuiSlotShaders.func_148144_a(GuiSlotShaders.java:81)
+	at net.minecraft.client.gui.GuiSlot.func_178039_p(GuiSlot.java:323)
+	at net.optifine.shaders.gui.GuiShaders.func_146274_d(GuiShaders.java:117)
+	at net.minecraft.client.gui.GuiScreen.func_146269_k(GuiScreen.java:501)
+
+-- Affected screen --
+Details:
+	Screen name: net.optifine.shaders.gui.GuiShaders
+Stacktrace:
+	at net.minecraft.client.Minecraft.func_71407_l(Minecraft.java:1759)
+	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:1098)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:398)
+	at net.minecraft.client.main.Main.main(SourceFile:123)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 8.1 (amd64) version 6.3
+	Java Version: 1.8.0_51, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 245252888 bytes (233 MB) / 2416443392 bytes (2304 MB) up to 3817865216 bytes (3641 MB)
+	JVM Flags: 4 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xms1024M -Xmx4096M -XX:MaxPermSize=256M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2847 Optifine OptiFine_1.12.2_HD_U_F4_pre3 19 mods loaded, 19 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State  | ID              | Version                      | Source                                                         | Signature |
+	|:------ |:--------------- |:---------------------------- |:-------------------------------------------------------------- |:--------- |
+	| LCHIJA | minecraft       | 1.12.2                       | minecraft.jar                                                  | None      |
+	| LCHIJA | mcp             | 9.42                         | minecraft.jar                                                  | None      |
+	| LCHIJA | FML             | 8.0.99.99                    | forge-1.12.2-14.23.5.2847.jar                                  | None      |
+	| LCHIJA | forge           | 14.23.5.2847                 | forge-1.12.2-14.23.5.2847.jar                                  | None      |
+	| LCHIJA | foamfixcore     | 7.7.4                        | minecraft.jar                                                  | None      |
+	| LCHIJA | forgelin        | 1.8.4                        | Forgelin-1.8.4.jar                                             | None      |
+	| LCHIJA | betterfoliage   | 2.2.0                        | BetterFoliage-MC1.12-2.2.0.jar                                 | None      |
+	| LCHIJA | conquest        | 3.0.2                        | ConquestReforged-3.0.2-mc1.12.2.jar                            | None      |
+	| LCHIJA | blockpalette    | 1.5.0                        | ConquestReforged-3.0.2-mc1.12.2.jar                            | None      |
+	| LCHIJA | connect         | 1.0.3-mc1.12.2-SNAPSHOT      | ConquestReforged-3.0.2-mc1.12.2.jar                            | None      |
+	| LCHIJA | com.boydti.fawe | 3.5.1                        | FastAsyncWorldEdit-forge112-19.07.25-58243b6-1278-22.3.1.jar   | None      |
+	| LCHIJA | foamfix         | 0.10.5-1.12.2                | foamfix-0.10.5-1.12.2.jar                                      | None      |
+	| LCHIJA | fw              | 1.6.0                        | FullscreenWindowed-1.12-1.6.0.jar                              | None      |
+	| LCHIJA | jei             | 4.15.0.268                   | jei_1.12.2-4.15.0.268.jar                                      | None      |
+	| LCHIJA | journeymap      | 1.12.2-5.5.5                 | journeymap-1.12.2-5.5.5.jar                                    | None      |
+	| LCHIJA | quickhotbar     | 1.05                         | quickhotbar_1122_1.05.jar                                      | None      |
+	| LCHIJA | serverredirect  | 1.3.7                        | ServerRedirect-Forge-MC1.12.2-1.3.7.jar                        | None      |
+	| LCHIJA | worldedit       | 6.1.10-SNAPSHOT              | worldedit-forge-mc1.12.2-6.1.10-SNAPSHOT-dist.jar              | None      |
+	| LCHIJA | worldeditcuife2 | 2.1.2-mf-1.12.2-14.23.5.2768 | WorldEdit+CUI+Forge+Edition+2-2.1.2-mf-1.12.2-14.23.5.2768.jar | None      |
+
+	Loaded coremods (and transformers): 
+Do not report to Forge! (If you haven't disabled the FoamFix coremod, try disabling it in the config! Note that this bit of text will still appear.) (foamfix-0.10.5-1.12.2.jar)
+  pl.asie.foamfix.coremod.FoamFixTransformer
+ForgelinPlugin (Forgelin-1.8.4.jar)
+  
+BetterFoliageLoader (BetterFoliage-MC1.12-2.2.0.jar)
+  mods.betterfoliage.loader.BetterFoliageTransformer
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 451.48' Renderer: 'GeForce RTX 2080/PCIe/SSE2'
+	Launched Version: 1.12.2
+	LWJGL: 2.9.4
+	OpenGL: GeForce RTX 2080/PCIe/SSE2 GL version 4.6.0 NVIDIA 451.48, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: Conquest Reforged.zip
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 12x Intel(R) Core(TM) i7-8700K CPU @ 3.70GHz
+	OptiFine Version: OptiFine_1.12.2_HD_U_F4_pre3
+	OptiFine Build: 20190828-223328
+	Render Distance Chunks: 16
+	Mipmaps: 0
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: Sildurs Vibrant Shaders v1.27 Extreme-VL.zip
+	OpenGlVersion: 4.6.0 NVIDIA 451.48
+	OpenGlRenderer: GeForce RTX 2080/PCIe/SSE2
+	OpenGlVendor: NVIDIA Corporation
+	CpuCount: 12
